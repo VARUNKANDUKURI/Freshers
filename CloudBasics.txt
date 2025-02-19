@@ -1,0 +1,150 @@
+Cloud Computing Interview Questions and Answers
+
+ 1. Cloud Computing Fundamentals
+
+1. What is cloud computing?  
+   Cloud computing is the delivery of computing services such as servers, storage, databases, networking, software, and analytics over the internet. It allows users to access and store data remotely rather than on local servers.
+
+2. What are the key characteristics of cloud computing?  
+   - On-demand self-service
+   - Broad network access
+   - Resource pooling
+   - Rapid elasticity
+   - Measured service
+
+3. What are the different types of cloud computing services?  
+   - IaaS (Infrastructure as a Service): Provides virtualized computing resources over the internet (e.g., AWS EC2, Google Compute Engine).
+   - PaaS (Platform as a Service): Provides a platform for developers to build applications (e.g., AWS Elastic Beanstalk, Google App Engine).
+   - SaaS (Software as a Service): Delivers software applications over the internet (e.g., Gmail, Dropbox, Salesforce).
+
+4. What are the different cloud deployment models?  
+   - Public Cloud: Services are available to multiple customers over the internet.
+   - Private Cloud: Services are dedicated to a single organization.
+   - Hybrid Cloud: A combination of public and private clouds.
+   - Community Cloud: Shared infrastructure for a specific group of organizations.
+
+5. What are the benefits of cloud computing?  
+   - Cost efficiency
+   - Scalability
+   - Accessibility
+   - Disaster recovery
+   - Security
+
+6. What is serverless computing?  
+   Serverless computing allows developers to build and run applications without managing infrastructure. Cloud providers handle the underlying resources dynamically. Examples: AWS Lambda, Azure Functions.
+
+7. What is edge computing, and how is it different from cloud computing?  
+   Edge computing processes data closer to the source (e.g., IoT devices) rather than relying on centralized cloud data centers. This reduces latency and improves performance.
+
+---
+
+ 2. Cloud Service Providers
+
+8. What are some popular cloud service providers?  
+   - Amazon Web Services (AWS)
+   - Microsoft Azure
+   - Google Cloud Platform (GCP)
+   - IBM Cloud
+   - Oracle Cloud
+
+9. What is AWS, and what are its key services?  
+   AWS is a leading cloud service provider offering services like EC2 (compute), S3 (storage), RDS (database), Lambda (serverless computing), and VPC (networking).
+
+10. What is Microsoft Azure, and what are its key services?  
+   Azure provides services like Virtual Machines (VMs), Blob Storage, Azure SQL Database, Azure Functions (serverless), and Azure Kubernetes Service (AKS).
+
+11. What is Google Cloud Platform (GCP), and what are its key services?  
+   GCP provides services like Compute Engine, Cloud Storage, BigQuery (analytics), Kubernetes Engine (GKE), and Firebase (app development).
+
+12. What are the differences between AWS, Azure, and GCP?  
+   - AWS has the largest market share and the most mature ecosystem.
+   - Azure integrates well with Microsoft products.
+   - GCP is known for data analytics and AI/ML services.
+
+---
+
+ 3. Virtualization & Containers
+
+13. What is virtualization in cloud computing?  
+   Virtualization allows multiple virtual machines (VMs) to run on a single physical server by using a hypervisor.
+
+14. What is the difference between virtualization and cloud computing?  
+   Virtualization creates multiple virtual environments on a single physical machine, while cloud computing provides scalable, on-demand services over the internet.
+
+15. What are VMs (Virtual Machines)?  
+   VMs are software-based emulations of physical computers that run operating systems and applications in an isolated environment.
+
+16. What are containers, and how are they different from VMs?  
+   Containers are lightweight, portable, and run applications with minimal dependencies, whereas VMs require a full OS installation and consume more resources.
+
+17. What is Kubernetes, and how does it work in cloud computing?  
+   Kubernetes is an open-source container orchestration platform that automates deployment, scaling, and management of containerized applications.
+
+---
+
+ 4. Networking in Cloud
+
+18. What is a Virtual Private Cloud (VPC)?  
+   A VPC is a secure, isolated cloud network that allows users to launch resources in a logically separated environment.
+
+19. What is cloud networking?  
+   Cloud networking involves managing and delivering network services such as connectivity, security, and routing in a cloud environment.
+
+20. What is a load balancer in cloud computing?  
+   A load balancer distributes incoming network traffic across multiple servers to ensure high availability and reliability.
+
+21. What is an API Gateway in the cloud?  
+   An API Gateway manages, secures, and optimizes API requests between clients and backend services.
+
+22. What is a Content Delivery Network (CDN)?  
+   A CDN delivers cached web content from servers closer to the user to reduce latency and improve performance.
+
+23. What is a VPN, and how does it work in the cloud?  
+   A Virtual Private Network (VPN) securely connects remote users to a cloud network over an encrypted connection.
+
+---
+
+ 5. Storage & Databases in Cloud
+
+24. What are the different types of storage in the cloud?  
+   - Block Storage (e.g., AWS EBS, Azure Disk Storage)
+   - Object Storage (e.g., AWS S3, Azure Blob Storage)
+   - File Storage (e.g., AWS EFS, Azure File Storage)
+
+25. What is Amazon S3, and how does it work?  
+   Amazon S3 (Simple Storage Service) is an object storage service that stores data as objects within buckets and provides high durability and scalability.
+
+26. What is Azure Blob Storage?  
+   Azure Blob Storage is Microsoft's object storage solution optimized for storing unstructured data.
+
+27. What are cloud databases, and what are some examples?  
+   Cloud databases are managed database services like AWS RDS, Azure SQL Database, and Google Cloud Spanner.
+
+28. What is NoSQL, and how is it used in cloud databases?  
+   NoSQL databases store data in flexible formats like key-value pairs, documents, or graphs. Examples: MongoDB, DynamoDB, Cassandra.
+
+---
+
+ 6. Security & Compliance in Cloud
+
+29. What are the security challenges in cloud computing?  
+   - Data breaches
+   - Unauthorized access
+   - Compliance violations
+   - DDoS attacks
+
+30. What is Identity and Access Management (IAM)?  
+   IAM is a framework for controlling user permissions and access to cloud resources.
+
+31. What is data encryption in the cloud?  
+   Data encryption converts data into a secure format to prevent unauthorized access.
+
+32. What is Multi-Factor Authentication (MFA)?  
+   MFA requires multiple forms of verification (e.g., password + OTP) to enhance security.
+
+33. What are cloud compliance certifications?  
+   Examples: ISO 27001, HIPAA, GDPR, SOC 2.
+
+---
+
+
