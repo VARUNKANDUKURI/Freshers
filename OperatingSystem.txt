@@ -1,0 +1,171 @@
+1. What is an Operating System?
+
+An Operating System (OS) is system software that manages computer hardware, software resources, and provides services for computer programs. It acts as an interface between the user and hardware.
+
+Examples of Operating Systems:
+	•	Windows
+	•	Linux (Ubuntu, RHEL, CentOS)
+	•	macOS
+	•	Android, iOS
+	
+------------------------------------------------------------------------------------------
+
+2. What are the main functions of an Operating System?
+
+The OS performs the following functions:
+	1.	Process Management – Handles execution of processes (scheduling, termination).
+	2.	Memory Management – Allocates and deallocates memory for processes.
+	3.	File System Management – Manages files and directories.
+	4.	Device Management – Controls peripherals like printers, hard drives.
+	5.	Security & Access Control – Manages user authentication and security.
+	6.	Error Detection & Handling – Detects hardware/software failures.
+	
+------------------------------------------------------------------------------------------
+
+3. What is the difference between Process and Thread?
+
+A Process is an independent program in execution with its own memory space, 
+while a Thread is a lightweight unit of execution within a process that shares memory with other threads.
+
+Key Differences:
+	•	Memory: Each process has its own memory space, while threads share the same memory within a process.
+	•	Communication: Inter-Process Communication (IPC) is needed for processes, while threads share data directly.
+	•	Overhead: Creating a process requires more system resources, while threads are lightweight.
+	•	Example: Running multiple applications (Chrome, VS Code) represents processes, while multiple tabs in Chrome represent threads.
+	
+------------------------------------------------------------------------------------------
+
+4. What is the difference between Multiprocessing and Multithreading?
+	•	Multiprocessing uses multiple CPUs/cores to execute processes in parallel, improving performance.
+	•	Multithreading runs multiple threads within a single process, improving efficiency but sharing CPU time.
+
+Key Differences:
+	•	CPU Usage: Multiprocessing uses multiple cores, while multithreading uses a single core with time-sharing.
+	•	Speed: Multiprocessing is faster but requires more resources; multithreading is efficient for I/O-bound tasks.
+	•	Example: Running a browser and a game simultaneously is multiprocessing; running multiple tabs in a browser is multithreading.
+	
+------------------------------------------------------------------------------------------
+
+5. What is Deadlock in an OS?
+
+A deadlock occurs when two or more processes are waiting for resources that are held by each other, causing an infinite waiting state.
+
+Conditions for Deadlock (Coffman’s Conditions):
+	1.	Mutual Exclusion – Only one process can use a resource at a time.
+	2.	Hold and Wait – A process is holding one resource and waiting for another.
+	3.	No Preemption – A resource cannot be forcibly taken from a process.
+	4.	Circular Wait – A cycle of processes waiting for each other.
+
+Deadlock Prevention Strategies:
+	•	Avoid circular wait by resource ordering.
+	•	Allow preemption of resources.
+	•	Limit the number of resources a process can request.
+	
+------------------------------------------------------------------------------------------
+
+6. What is Paging in OS?
+
+Paging is a memory management technique where processes are divided into fixed-size blocks called pages, 
+and the main memory is divided into frames of the same size. It eliminates external fragmentation.
+
+Example:
+
+If a process is 8 KB and the page size is 2 KB, then it will be divided into 4 pages, which will be stored in 4 frames in memory.
+
+------------------------------------------------------------------------------------------
+
+7. What is Virtual Memory?
+
+Virtual Memory is a technique where the OS uses hard disk space as an extension of RAM when physical memory is full. 
+This allows larger programs to run on systems with limited RAM.
+
+Example:
+
+When you open multiple apps and your RAM is full, the OS uses the swap file on the disk to store inactive pages.
+
+------------------------------------------------------------------------------------------
+
+8. What is Context Switching?
+
+Context Switching is the process of saving the current state of a CPU process and loading another process. This occurs when:
+	•	A higher-priority process arrives.
+	•	A process moves from running to waiting.
+
+Example:
+
+When you switch between different applications (e.g., Chrome to VS Code), the OS performs context switching to save and restore process states.
+
+------------------------------------------------------------------------------------------
+
+9. What are the different types of Operating Systems?
+	1.	Batch OS – Jobs are processed in batches (e.g., IBM Mainframes).
+	2.	Time-Sharing OS – CPU time is shared among multiple users (e.g., Unix, Linux).
+	3.	Distributed OS – Uses multiple computers to process data (e.g., Hadoop, Cluster Computing).
+	4.	Real-Time OS (RTOS) – Processes must execute in real-time (e.g., Embedded Systems, Robotics).
+	5.	Network OS – Manages network resources (e.g., Windows Server, Linux Server).
+	
+------------------------------------------------------------------------------------------
+
+10. What are System Calls in an OS?
+
+System Calls are functions used by a program to request services from the OS. They act as an interface between user applications and the OS kernel.
+
+Types of System Calls:
+	1.	Process Control – Create, terminate, execute (e.g., fork(), exit()).
+	2.	File Management – Read, write, open, close files (open(), read()).
+	3.	Device Management – Request, release, configure devices (ioctl()).
+	4.	Information Maintenance – Get system time, process info (getpid()).
+	5.	Communication – Send and receive messages (pipe(), socket()).
+	
+------------------------------------------------------------------------------------------
+
+11. What is the difference between Monolithic Kernel and Microkernel?
+	•	A Monolithic Kernel includes all OS services (file system, drivers, memory, etc.) in a single large program.
+	•	A Microkernel keeps only essential services (process and memory management) in the kernel, with other services running in user space.
+
+Key Differences:
+	•	Performance: Monolithic kernels are faster but less secure, while microkernels are more secure but slightly slower.
+	•	Stability: Microkernels are more modular and crash-resistant.
+	•	Example: Linux and Windows use Monolithic kernels, while Minix and QNX use Microkernels.
+	
+------------------------------------------------------------------------------------------
+
+12. What are the different Scheduling Algorithms in OS?
+	1.	First-Come, First-Serve (FCFS) – Executes processes in order of arrival.
+	2.	Shortest Job Next (SJN) – Executes the smallest process first.
+	3.	Round Robin (RR) – Each process gets a fixed time (time quantum).
+	4.	Priority Scheduling – Processes execute based on priority.
+	5.	Multilevel Queue Scheduling – Separates processes into different queues (e.g., system and user processes).
+
+------------------------------------------------------------------------------------------
+
+13. What is Thrashing in an OS?
+
+Thrashing occurs when a system spends more time swapping pages between RAM and disk instead of executing processes. It happens when too many processes compete for limited memory.
+
+Solution to Thrashing:
+	•	Increase RAM size.
+	•	Use efficient page replacement algorithms.
+	•	Reduce the number of active processes.
+
+------------------------------------------------------------------------------------------
+
+14. What is an Interrupt?
+
+An Interrupt is a signal sent to the processor to stop current execution and handle an important event.
+
+Types of Interrupts:
+	1.	Hardware Interrupt – Generated by external devices (e.g., keyboard, mouse).
+	2.	Software Interrupt – Triggered by programs (system calls).
+	
+------------------------------------------------------------------------------------------
+
+15. What is the difference between Internal and External Fragmentation?
+	•	Internal Fragmentation happens when allocated memory blocks have unused space inside them due to fixed block sizes.
+	•	External Fragmentation occurs when free memory is scattered in small blocks, making it hard to allocate large chunks.
+
+Solutions:
+	•	Internal Fragmentation: Use paging, where memory is allocated in fixed-size pages.
+	•	External Fragmentation: Use compaction (rearrange memory) or segmentation (allocate memory dynamically).
+	
+------------------------------------------------------------------------------------------

@@ -1,0 +1,204 @@
+1. What is a Computer Network?
+
+A Computer Network is a collection of interconnected devices (computers, servers, routers) that communicate and 
+share resources over wired or wireless connections.
+
+Examples:
+	•	Local Area Network (LAN) – Office network, home Wi-Fi.
+	•	Wide Area Network (WAN) – The Internet.
+	
+------------------------------------------------------------------------------------------
+
+2. What are the types of computer networks?
+	1.	LAN (Local Area Network) – Covers a small area like a home, office.
+	2.	WAN (Wide Area Network) – Covers large areas, like cities or countries (e.g., the Internet).
+	3.	MAN (Metropolitan Area Network) – Covers a city (e.g., cable TV networks).
+	4.	PAN (Personal Area Network) – Smallest network, like Bluetooth connections.
+	5.	VPN (Virtual Private Network) – Secure private network over the Internet.
+	
+------------------------------------------------------------------------------------------
+
+3. What is the OSI Model? Name its layers.
+
+The OSI (Open Systems Interconnection) Model is a conceptual framework that standardizes network communication in seven layers:
+	1.	Physical Layer – Deals with hardware, cables, signals.
+	2.	Data Link Layer – Ensures error-free data transfer (MAC, Ethernet).
+	3.	Network Layer – Handles IP addressing, routing (Routers, IPv4/IPv6).
+	4.	Transport Layer – Manages end-to-end communication (TCP, UDP).
+	5.	Session Layer – Manages sessions and connections between applications.
+	6.	Presentation Layer – Encrypts and formats data (SSL, compression).
+	7.	Application Layer – Provides services like HTTP, FTP, SMTP (Browsers, Emails).
+	
+------------------------------------------------------------------------------------------
+4. TCP vs UDP Ports: Key Differences
+
+1. TCP (Transmission Control Protocol)
+	•	Type: Connection-oriented (establishes a connection before data transfer).
+	•	Reliability: Ensures accurate data delivery with acknowledgments and retransmissions.
+	•	Speed: Slower due to error-checking and flow control.
+	•	Use Cases: Web browsing (HTTP/HTTPS), email, file transfers.
+
+Example TCP Ports:
+	•	HTTP: Port 80
+	•	HTTPS: Port 443
+	•	FTP: Port 21
+	
+2. UDP (User Datagram Protocol)
+	•	Type: Connectionless (no prior connection setup).
+	•	Reliability: Unreliable; no acknowledgment or retransmission.
+	•	Speed: Faster due to minimal overhead.
+	•	Use Cases: Streaming, online gaming, DNS queries, VoIP.
+
+Example UDP Ports:
+	•	DNS: Port 53
+	•	DHCP: Ports 67, 68
+	•	RTP: Ports 5004, 5005
+	
+------------------------------------------------------------------------------------------
+
+
+5. What is an IP Address? What are IPv4 and IPv6?
+
+An IP Address is a unique identifier assigned to a device in a network.
+
+IPv4 (Internet Protocol Version 4)
+	•	32-bit address (e.g., 192.168.1.1).
+	•	Supports 4.3 billion devices.
+	•	Uses dot-decimal notation.
+
+IPv6 (Internet Protocol Version 6)
+	•	128-bit address (e.g., 2001:db8::1).
+	•	Supports trillions of devices.
+	•	Uses colon-separated hexadecimal notation.
+	
+------------------------------------------------------------------------------------------
+
+6. What is a MAC Address?
+
+A MAC (Media Access Control) Address is a unique 48-bit identifier assigned to a device’s network interface card (NIC). 
+It is written in hexadecimal format (e.g., 00:1A:2B:3C:4D:5E).
+	•	Used for local network communication (LAN).
+	•	Unlike IP addresses, MAC addresses do not change.
+
+------------------------------------------------------------------------------------------
+
+7. What is DNS and how does it work?
+
+DNS (Domain Name System) translates domain names (e.g., google.com) into IP addresses (e.g., 142.250.190.78).
+
+How DNS Works?
+	1.	User enters www.google.com.
+	2.	The browser contacts the DNS server to get the IP address.
+	3.	The DNS server responds with the IP address.
+	4.	The browser connects to the server using the IP address.
+	
+------------------------------------------------------------------------------------------
+
+8. What is a Subnet Mask?
+
+A Subnet Mask divides an IP address into a network part and a host part to improve efficiency.
+
+Example:
+
+For IP Address 192.168.1.10 and Subnet Mask 255.255.255.0:
+	•	Network ID: 192.168.1.0
+	•	Host ID: 10
+	
+------------------------------------------------------------------------------------------
+
+9. What are the differences between Hub, Switch, and Router?
+
+Hub -->	Broadcasts data to all devices in a network	--> Physical Layer
+Switch --> Sends data only to the intended recipient --> Data Link Layer
+Router --> Connects different networks and routes traffic --> Network Layer
+
+------------------------------------------------------------------------------------------
+
+10. What is NAT (Network Address Translation)?
+
+NAT allows multiple devices in a private network to share a single public IP address to access the Internet.
+
+Types of NAT:
+	•	Static NAT: One private IP is mapped to one public IP.
+	•	Dynamic NAT: Assigns a public IP dynamically.
+	•	PAT (Port Address Translation): Multiple private IPs share a single public IP using different ports.
+	
+------------------------------------------------------------------------------------------
+
+11. What is DHCP?
+
+DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses to devices in a network.
+
+How DHCP Works?
+	1.	The device sends a DHCP request.
+	2.	The DHCP server assigns an available IP address.
+	3.	The device receives an IP, subnet mask, and gateway.
+	
+------------------------------------------------------------------------------------------
+
+12. What is a Firewall?
+
+A Firewall is a security system that monitors and controls incoming and outgoing network traffic based on security rules.
+
+Types of Firewalls:
+	•	Packet Filtering Firewall – Examines packets and blocks/rejects them.
+	•	Stateful Firewall – Tracks the state of active connections.
+	•	Proxy Firewall – Acts as an intermediary between users and the Internet.
+------------------------------------------------------------------------------------------	
+	
+13. What is the difference between Unicast, Broadcast, and Multicast?
+	•	Unicast – One sender, one receiver (e.g., one-to-one communication like a private chat).
+	•	Broadcast – One sender, all receivers (e.g., ARP requests).
+	•	Multicast – One sender, multiple selected receivers (e.g., live streaming).
+	
+------------------------------------------------------------------------------------------	
+14. What is ARP (Address Resolution Protocol)?
+
+ARP maps an IP address to a MAC address in a network.
+
+How ARP Works?
+	1.	A device asks, “Who has IP 192.168.1.2?”
+	2.	The target device responds with its MAC address.
+	3.	The sender stores the mapping in its ARP cache.
+	
+------------------------------------------------------------------------------------------	
+15. What is the difference between Circuit Switching and Packet Switching?
+	•	Circuit Switching – A dedicated path is established for communication (e.g., telephone calls).
+	•	Packet Switching – Data is divided into packets and transmitted separately (e.g., the Internet).
+	
+	
+------------------------------------------------------------------------------------------	
+16. What is a VLAN (Virtual Local Area Network)?
+
+A VLAN logically groups devices into different networks even if they are physically connected to the same switch.
+
+Benefits of VLANs:
+	•	Improves security.
+	•	Reduces network congestion.
+	•	Separates departments in an organization.
+	
+------------------------------------------------------------------------------------------
+	
+17. What is Load Balancing?
+
+Load Balancing distributes incoming network traffic across multiple servers to ensure no single server is overwhelmed.
+
+Example:
+
+A website with millions of users uses load balancers to distribute traffic among multiple web servers.
+
+------------------------------------------------------------------------------------------
+
+18. What is the difference between HTTP and HTTPS?
+	•	HTTP (HyperText Transfer Protocol): Unsecured data transmission.
+	•	HTTPS (HTTP Secure): Uses SSL/TLS encryption for secure data transfer.
+	
+------------------------------------------------------------------------------------------	
+	
+19. What is a Proxy Server?
+
+A Proxy Server acts as an intermediary between users and the Internet, providing security, caching, and content filtering.
+
+Example:
+	•	Forward Proxy: Used by clients to access external websites.
+	•	Reverse Proxy: Used by web servers to handle client requests.

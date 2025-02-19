@@ -1,0 +1,221 @@
+
+
+ 1. What is a Database?  
+A Database is an organized collection of data that can be stored, retrieved, and managed efficiently.  
+
+# Examples:  
+- Banking systems store customer account details in databases.  
+- Social media platforms use databases to store user profiles, posts, and messages.  
+
+------------------------------------------------------------
+
+ 2. What is DBMS (Database Management System)?  
+A DBMS is software that helps users create, manage, and manipulate databases efficiently.  
+
+# Examples:  
+- MySQL, PostgreSQL, Oracle, MongoDB, Microsoft SQL Server.  
+
+------------------------------------------------------------
+
+ 3. What are the types of databases?  
+1. Relational Databases (RDBMS) – Stores data in tables (SQL-based, e.g., MySQL, PostgreSQL).  
+2. NoSQL Databases – Stores data in key-value, document, graph, or column-family formats (e.g., MongoDB, Cassandra).  
+3. Hierarchical Databases – Data is stored in a tree-like structure (e.g., IBM IMS).  
+4. Network Databases – Uses graph-like structures to store data.  
+5. Cloud Databases – Hosted on cloud platforms like AWS RDS, Azure SQL Database.  
+
+------------------------------------------------------------
+
+ 4. What is SQL?  
+SQL (Structured Query Language) is a programming language used to communicate with relational databases. It helps in querying, updating, and managing databases.  
+
+------------------------------------------------------------
+
+ 5. What are the types of SQL commands?  
+SQL commands are categorized into five types:  
+1. DDL (Data Definition Language) – CREATE, ALTER, DROP, TRUNCATE.  
+2. DML (Data Manipulation Language) – INSERT, UPDATE, DELETE.  
+3. DQL (Data Query Language) – SELECT.  
+4. DCL (Data Control Language) – GRANT, REVOKE.  
+5. TCL (Transaction Control Language) – COMMIT, ROLLBACK, SAVEPOINT.  
+
+------------------------------------------------------------
+
+ 6. What is the difference between SQL and NoSQL?  
+| Feature  | SQL (Relational DB) | NoSQL (Non-Relational DB) |
+|----------|--------------------|---------------------------|
+| Schema | Fixed schema (tables) | Flexible schema (documents, key-value) |
+| Scalability | Vertical scaling | Horizontal scaling |
+| ACID Compliance | Follows ACID properties | Uses BASE model for flexibility |
+| Examples | MySQL, PostgreSQL, Oracle | MongoDB, Cassandra, DynamoDB |
+
+------------------------------------------------------------
+
+ 7. What is a Primary Key?  
+A Primary Key is a unique identifier for a record in a table. It cannot have NULL values.  
+
+# Example:  
+```sql
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT
+);
+```
+
+------------------------------------------------------------
+
+ 8. What is a Foreign Key?  
+A Foreign Key is a field in one table that refers to the Primary Key in another table to establish a relationship.  
+
+# Example:  
+```sql
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    StudentID INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+```
+
+------------------------------------------------------------
+
+ 9. What is Normalization?  
+Normalization is the process of organizing a database to reduce redundancy and improve efficiency.  
+
+# Normalization Forms:  
+1. 1NF (First Normal Form) – Remove duplicate columns.  
+2. 2NF (Second Normal Form) – Ensure no partial dependency.  
+3. 3NF (Third Normal Form) – Remove transitive dependencies.  
+4. BCNF (Boyce-Codd Normal Form) – Stronger than 3NF.  
+
+------------------------------------------------------------
+
+ 10. What is Indexing in SQL?  
+Indexing improves database search performance by creating a data structure for faster retrieval.  
+
+# Example:  
+```sql
+CREATE INDEX idx_student ON Students(Name);
+```
+
+------------------------------------------------------------
+
+ 11. What is the difference between DELETE and TRUNCATE?  
+| Feature  | DELETE | TRUNCATE |
+|----------|--------|----------|
+| Purpose | Removes specific rows | Removes all rows from a table |
+| Rollback | Can be rolled back | Cannot be rolled back |
+| Performance | Slower | Faster |
+| Where Clause Support | Yes | No |
+
+------------------------------------------------------------
+
+ 12. What are Joins in SQL?  
+Joins are used to retrieve data from multiple tables based on relationships.  
+
+# Types of Joins:  
+1. INNER JOIN – Returns matching records.  
+2. LEFT JOIN – Returns all records from the left table and matching records from the right table.  
+3. RIGHT JOIN – Returns all records from the right table and matching records from the left table.  
+4. FULL JOIN – Returns all records from both tables.  
+
+# Example:  
+```sql
+SELECT Students.Name, Orders.OrderID
+FROM Students
+INNER JOIN Orders ON Students.StudentID = Orders.StudentID;
+```
+
+------------------------------------------------------------
+
+ 13. What is ACID in databases?  
+ACID (Atomicity, Consistency, Isolation, Durability) ensures reliable transactions in a database.  
+- Atomicity – Transaction is all or nothing.  
+- Consistency – Data remains in a valid state.  
+- Isolation – Transactions do not interfere with each other.  
+- Durability – Committed transactions are permanent.  
+
+------------------------------------------------------------
+
+ 14. What is a Stored Procedure?  
+A Stored Procedure is a precompiled SQL script that can be executed multiple times.  
+
+# Example:  
+```sql
+CREATE PROCEDURE GetStudentNames()
+AS
+BEGIN
+    SELECT Name FROM Students;
+END;
+```
+
+------------------------------------------------------------
+
+ 15. What is a View in SQL?  
+A View is a virtual table created using a query. It does not store data physically.  
+
+# Example:  
+```sql
+CREATE VIEW StudentView AS
+SELECT Name, Age FROM Students;
+```
+
+------------------------------------------------------------
+
+ 16. What is a Trigger in SQL?  
+A Trigger is an automatic action executed when a specific event occurs in the database.  
+
+# Example:  
+```sql
+CREATE TRIGGER UpdateStudentAge
+AFTER INSERT ON Students
+FOR EACH ROW
+BEGIN
+    UPDATE Students SET Age = Age + 1 WHERE StudentID = NEW.StudentID;
+END;
+```
+
+------------------------------------------------------------
+
+17. What is DDL (Data Definition Language)?
+
+DDL consists of SQL commands that define and modify database structures.
+
+Common DDL Commands:
+
+CREATE – Creates a new table, database, index, or view.
+
+ALTER – Modifies an existing database object (e.g., adding a column).
+
+DROP – Deletes a table or database permanently.
+
+TRUNCATE – Removes all records from a table but keeps the structure.
+
+example: 
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT
+);
+------------------------------------------------------------
+
+18. What is DML (Data Manipulation Language)?
+
+DML commands are used to manipulate data within tables.
+
+Common DML Commands:
+
+INSERT – Adds new records.
+
+UPDATE – Modifies existing records.
+
+DELETE – Removes specific records.
+
+example:
+
+INSERT INTO Students (StudentID, Name, Age) VALUES (1, 'John Doe', 20);
+UPDATE Students SET Age = 21 WHERE StudentID = 1;
+DELETE FROM Students WHERE StudentID = 1;
+
+------------------------------------------------------------

@@ -1,0 +1,223 @@
+1. What is Object-Oriented Programming (OOP)?
+
+OOP (Object-Oriented Programming) is a programming paradigm based on the concept of objects. It allows data and methods to be encapsulated in objects.
+
+Key Features of OOP:
+	•	Encapsulation – Hiding data using access modifiers.
+	•	Abstraction – Hiding implementation details from users.
+	•	Inheritance – Acquiring properties from a parent class.
+	•	Polymorphism – Performing a single action in multiple ways.
+	
+------------------------------------------------------------------------------------------
+
+2. What is a Class and an Object?
+	•	Class: A blueprint for creating objects. It defines attributes (data) and methods (functions).
+	•	Object: An instance of a class.
+
+Example in Python:
+class Car:  
+    def __init__(self, brand, model):  
+        self.brand = brand  
+        self.model = model  
+
+car1 = Car("Toyota", "Camry")  
+print(car1.brand)  # Output: Toyota  
+------------------------------------------------------------------------------------------
+
+3. What is Encapsulation? Why is it important?
+
+Encapsulation is the process of bundling data (attributes) and methods (functions) together, restricting direct access.
+
+Example of Encapsulation:
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # Private variable
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+
+account = BankAccount(500)
+account.deposit(200)
+print(account.get_balance())  # Output: 700
+
+🔹 Benefits: Security, data hiding, and better code management.
+
+------------------------------------------------------------------------------------------
+
+4. What is Abstraction?
+
+Abstraction is the concept of hiding implementation details and only exposing the necessary functionality.
+
+Example of Abstraction:
+
+from abc import ABC, abstractmethod  
+
+class Vehicle(ABC):  
+    @abstractmethod  
+    def start(self):  
+        pass  
+
+class Car(Vehicle):  
+    def start(self):  
+        print("Car is starting...")  
+
+c = Car()  
+c.start()  # Output: Car is starting...
+
+🔹 Benefits: Reduces complexity and increases reusability.
+------------------------------------------------------------------------------------------
+
+5. What is Inheritance? What are its types?
+
+Inheritance allows one class (child class) to derive properties and behavior from another (parent class).
+
+Types of Inheritance:
+	1.	Single Inheritance – One child inherits from one parent.
+	2.	Multiple Inheritance – A child class inherits from multiple parents.
+	3.	Multilevel Inheritance – A child inherits from a parent, which itself inherits from another class.
+	4.	Hierarchical Inheritance – Multiple child classes inherit from the same parent.
+	5.	Hybrid Inheritance – A combination of multiple inheritance types.
+
+Example of Single Inheritance:
+
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
+
+d = Dog()
+d.speak()  # Output: Animal speaks
+d.bark()   # Output: Dog barks
+
+------------------------------------------------------------------------------------------
+
+6. What is Polymorphism? What are its types?
+
+Polymorphism means one function, multiple behaviors.
+
+Types of Polymorphism:
+	1.	Method Overloading (Same function name, different parameters)
+	2.	Method Overriding (Child class redefines parent class method)
+
+Example of Method Overriding:
+
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+d = Dog()
+d.speak()  # Output: Dog barks
+
+------------------------------------------------------------------------------------------
+
+7. What is the difference between Method Overloading and Method Overriding?
+
+Method Overloading : Multiple methods with the same name but different parameters, Not natively supported in Python
+example: add(int, int) and add(float, float)
+
+Methods overriding : Child class redefines parent method, Supported in Python
+example : speak() in both parent and child class
+
+------------------------------------------------------------------------------------------
+
+8. What are Access Specifiers in OOP?
+
+Access specifiers control the visibility of class members.
+
+Access Specifier	Symbol	       Access Scope
+Public	    --->       self.var	  --> Accessible everywhere
+Protected	--->     _self.var	  --> Accessible within class & subclasses
+Private	    --->     __self.var	  --> Accessible only within the class
+
+example:
+class Person:
+    def __init__(self, name, age):
+        self.name = name  # Public
+        self._age = age   # Protected
+        self.__salary = 50000  # Private
+
+p = Person("John", 30)
+print(p.name)    # Accessible (Public)
+print(p._age)    # Accessible (Protected, but not recommended)
+print(p.__salary)  # Error: AttributeError (Private)
+
+------------------------------------------------------------------------------------------
+
+9. What is a Constructor?
+
+A constructor is a special method (__init__) that initializes an object automatically when it is created.
+
+Example of a Constructor:
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+c = Car("BMW", "X5")
+print(c.brand)  # Output: BMW
+
+------------------------------------------------------------------------------------------
+
+10. What is the difference between a Class and an Object?
+
+A class is a blueprint or template for creating objects, defining attributes (variables) and methods (functions). 
+An object is an instance of a class that holds actual data and can use the defined methods.
+
+Example:
+	•	Class: Car defines properties like brand, model, and methods like start and stop.
+	•	Object: car1 = Car("BMW", "X5") is an instance of the Car class with specific values.
+
+------------------------------------------------------------------------------------------
+
+11. What is the difference between an Abstract Class and an Interface?
+	•	An Abstract Class is a class that can have both abstract methods (without implementation) and concrete methods (with implementation). 
+	It cannot be instantiated directly.
+	•	An Interface defines only abstract methods (no implementation). All methods must be implemented by the derived class.
+
+Example:
+	•	Abstract Class: A Vehicle class with a start() method that must be defined in subclasses like Car or Bike.
+	•	Interface: In Java, an interface like Driveable would have only method signatures, and classes like Car and Bike must implement them.
+	
+------------------------------------------------------------------------------------------
+12. What is the Difference Between Composition and Inheritance?
+	•	Inheritance represents an “IS-A” relationship, where a subclass inherits properties from a parent class.
+	•	Composition represents a “HAS-A” relationship, where a class contains objects of another class instead of inheriting from it.
+
+Example:
+	•	Inheritance: Car is a type of Vehicle.
+	•	Composition: Car has an Engine instead of inheriting from Engine.
+
+------------------------------------------------------------------------------------------
+
+13. What is Multiple Inheritance? Is it supported in Python?
+
+Yes, Python supports multiple inheritance (a class inheriting from multiple parent classes).
+
+Example of Multiple Inheritance:
+
+class A:
+    def methodA(self):
+        print("Method from A")
+
+class B:
+    def methodB(self):
+        print("Method from B")
+
+class C(A, B):
+    pass
+
+c = C()
+c.methodA()  # Output: Method from A
+c.methodB()  # Output: Method from B
+
+------------------------------------------------------------------------------------------

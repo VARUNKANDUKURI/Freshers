@@ -1,0 +1,552 @@
+Data Structures & Algorithms
+
+1. What is a Data Structure? and types ?
+
+A data structure is a way of organizing, storing, and managing data efficiently. Examples include arrays, linked lists, stacks, queues, trees, and graphs.
+
+Data structures are broadly classified into:
+	1.	Linear Data Structures – Elements are stored sequentially.
+	•	Examples: Array, Linked List, Stack, Queue
+	2.	Non-Linear Data Structures – Elements are stored hierarchically.
+	•	Examples: Tree, Graph, Hash Table
+
+
+2. What is an array? How is it different from a linked list?
+
+An array is a collection of elements stored at contiguous memory locations. It allows fast access using an index but has a fixed size.
+ example:
+ arr = [10, 20, 30, 40]
+print(arr[1])  # Output: 20
+
+
+A linked list is a data structure where elements (nodes) are linked using pointers, allowing dynamic memory allocation but slower access.
+types:
+Types:
+	1.	Singly Linked List – Each node has a pointer to the next node.
+	2.	Doubly Linked List – Each node has pointers to both the previous and next nodes.
+	3.	Circular Linked List – The last node points to the first node.
+
+
+
+3. Explain the difference between a stack and a queue.
+
+A Stack is a LIFO (Last In, First Out) data structure where elements are added and removed from the same end (top).
+
+Operations:
+	•	push() – Insert element
+	•	pop() – Remove element
+	•	peek() – Get the top element
+
+A Queue is a FIFO (First In, First Out) data structure where elements are inserted at the rear and removed from the front.
+
+Operations:
+	•	enqueue() – Add element
+	•	dequeue() – Remove element
+	
+4. What is Binary tree and binary search tree (BST)?
+
+
+A Binary Tree is a hierarchical structure where each node has at most two children (left and right).
+
+Types:
+	•	Full Binary Tree – Every node has 0 or 2 children.
+	•	Complete Binary Tree – All levels are filled except possibly the last.
+	•	Binary Search Tree (BST) – Left child < Root < Right child.
+
+
+A BST is a tree data structure where:
+	•	The left subtree has values less than the root.
+	•	The right subtree has values greater than the root.
+	•	Operations like search, insert, and delete have an average time complexity of O(log n).
+	
+5. What are the different types of sorting algorithms? Explain their complexities.
+
+Sorting Algorithm	Best Case	Worst Case	Avg Case	Stable?
+Bubble Sort	O(n)	O(n²)	O(n²)	✅
+Selection Sort	O(n²)	O(n²)	O(n²)	❌
+Insertion Sort	O(n)	O(n²)	O(n²)	✅
+Merge Sort	O(n log n)	O(n log n)	O(n log n)	✅
+Quick Sort	O(n log n)	O(n²)	O(n log n)	❌
+
+
+6. What is the difference between DFS and BFS?
+	•	DFS (Depth-First Search): Uses recursion or a stack, exploring as far as possible before backtracking.
+	•	BFS (Breadth-First Search): Uses a queue, exploring level by level.
+	
+Time & Space Complexity
+
+7. What is Big-O notation?
+
+Big-O describes the upper bound of an algorithm’s runtime in terms of input size n.
+	•	O(1): Constant time (e.g., array access)
+	•	O(log n): Logarithmic time (e.g., binary search)
+	•	O(n): Linear time (e.g., simple loops)
+	•	O(n²): Quadratic time (e.g., nested loops)
+	
+8. What is the time complexity of binary search?
+	•	Best Case: O(1) (if the middle element is the target)
+	•	Average & Worst Case: O(log n) (dividing search space in half)
+	
+9. What is a Hash Table?
+
+A Hash Table is a data structure that maps keys to values using a hash function.
+
+Example (Python Dictionary as Hash Table):
+hash_table = {}
+hash_table["name"] = "Alice"
+print(hash_table["name"])  # Output: Alice
+
+10. What is a Graph? What are its types?
+
+A Graph is a collection of nodes (vertices) and edges (connections).
+
+Types:
+	•	Directed Graph – Edges have direction.
+	•	Undirected Graph – No direction in edges.
+	•	Weighted Graph – Edges have weights.
+
+11.  What is a Trie Data Structure?
+
+A Trie (Prefix Tree) is a tree-like structure for efficiently storing and searching strings.
+	•	Used in autocomplete, spell checkers, and search engines.
+
+	
+============================================================================
+	
+	
+Question 1: What is an array?
+Answer: An array is a data structure consisting of a collection of elements, each identified by at least one array index or key.
+
+Question 2: Can an array be resized at runtime?
+Answer: In some programming languages, arrays can be resized dynamically, while in others, such as C, the size is fixed.
+
+Question 3: What is the time complexity for accessing an element in an array?
+Answer: The time complexity for accessing an element in an array is O(1), as it can be accessed directly using its index.
+
+Question 4: What is the difference between an array and a linked list?
+Answer: An array is a static data structure, while a linked list is a dynamic data structure. 
+Arrays have a fixed size, and elements are stored consecutively in memory, while linked lists can grow and do not require contiguous memory allocation.
+
+Question 5: How would you find the smallest and largest element in an array?
+Answer: To find the smallest and largest elements in an array, one common approach is to iterate through the array and keep track of the smallest and largest elements encountered so far.
+
+Question 6: Explain the concept of a multi-dimensional array.
+Answer: A multi-dimensional array is an array that contains other arrays. For example, a 2D array is an array of arrays, representing a matrix.
+
+Question 7: What is an array index out of bounds exception?
+Answer: Answer: This error occurs when an attempt is made to access an element at an index that is outside the bounds of the array (e.g., negative index or greater than the array size).
+
+Question 8: How would you reverse an array in-place in linear time and constant space?
+Answer: One approach is to use two pointers starting from the beginning and end of the array and swap the elements until they meet in the middle.
+
+Question 9: Explain the concept of a jagged array.
+Answer: A jagged array is an array of arrays, where each sub-array could be of a different length.
+
+Question 10: How can you find duplicate elements in an array?
+Answer: One way to find duplicate elements in an array is to use a hash set or to sort the array and then iterate through it to find consecutive duplicates.
+
+Question 11: Discuss the advantages and disadvantages of using arrays.
+Answer:
+Advantages: Constant time access, simple implementation, and efficient storage for contiguous data.
+Disadvantages: Fixed size, no support for dynamic growth, inefficient for insertions and deletions.
+
+Question 12: Explain the concept of a sparse array.
+Answer: A sparse array is an array in which most of the elements have the same value. It can be represented using a data structure that only stores the non-default (non-zero) values.
+
+Question 13: What is the difference between an array and a list?
+Answer: An array is a static data structure with a fixed size, while a list is a dynamic data structure that can grow and shrink during runtime.
+
+Commonly Asked Data Structure Interview Questions on Linked List
+Question 1: What is a linked list?
+Answer: A linked list is a linear data structure consisting of a sequence of elements, where each element points to the next one, forming a chain.
+
+Question 2: What are the different types of linked lists?
+Answer: Singly linked list, doubly linked list, and circular linked list.
+
+Question 3: What are the advantage of Linked List?
+Answer: Advantages of Linked Lists:
+
+Dynamic memory allocation
+Efficient insertion and deletion
+Can represent complex data structures
+Can be used to implement queues and stacks
+Can be used for memory management and caching
+Can be used for garbage collection
+
+Question 4: What are the disadvantage of Linked List?
+Answer: Disadvantages of Linked Lists:
+Slow random access
+More memory overhead
+Difficult to debug
+Not cache-friendly
+Can suffer from memory leaks
+
+Question 5: What is a cycle/loop in Singly Linked List:
+Answer: A cycle, also known as a loop, in a singly-linked list occurs when a node in the list points back to a previous node, creating a circular path. This means that if you start traversing the list from any node, you will eventually come back to the same node, forming an infinite loop.
+
+Question 6: What is time complexity of Linked List operations?
+Answer: The time complexity of common operations on a singly-linked list are as follows:
+
+Insertion:
+
+At the beginning: O(1)
+At the end: O(n)
+At a specific position: O(n)
+Deletion:
+
+At the beginning: O(1)
+At the end: O(n)
+At a specific position: O(n)
+Search: O(n)
+Traversal: O(n)
+
+Question 7: How would you compare Dynamic Arrays Vs Linked Lists?
+Answer: Dynamic Array Advantages:
+
+Fast random access (O(1))
+Efficient for large data sets
+Contiguous memory allocation
+Dynamic Array Disadvantages:
+
+Slow insertion and deletion in the middle (O(n))
+Fixed size, can lead to memory waste or reallocation
+Linked Lists Advantages:
+
+Efficient insertion and deletion in the middle (O(1))
+Can grow and shrink dynamically
+Can represent complex data structures
+Linked Lists Disadvantages:
+
+Slow random access (O(n))
+More memory overhead due to pointers
+Not cache-friendly
+Dynamic arrays are more efficient for random access and large data sets, while linked lists are more efficient for operations that involve insertion and deletion in the middle. Linked lists are also more flexible and can represent complex data structures.
+
+Commonly Asked Data Structure Interview Questions on Stack:
+Question 1: What is a stack?
+Answer: A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle.
+
+Question 2: What are the operations performed on a stack?
+Answer: The common operations on a stack are push (insert an element), pop (remove the top element), and peek (view the top element).
+
+Question 3: How is a stack implemented in an array?
+Answer: A stack can be implemented using an array by maintaining a pointer to the top of the stack.
+
+Question 4: What is the time complexity of stack operations?
+Answer: Push, pop, and peek operations have a time complexity of O(1).
+
+Question 5: What are the applications of a stack?
+Answer: Stacks are used in various applications, such as function calls, recursion, expression evaluation, and parsing.
+
+Question 6: What is a stack overflow?
+Answer: A stack overflow occurs when the stack exceeds its allocated memory.
+
+Question 7: What is a stack underflow?
+Answer: A stack underflow occurs when the stack is empty and an attempt is made to pop an element.
+
+Question 8: What is a postfix expression?
+Answer: A postfix expression is an expression where the operator follows the operands.
+
+Question 9: How can a stack be used to evaluate a postfix expression?
+Answer: By pushing operands onto the stack and performing operations when operators are encountered.
+
+Question 10: What is a prefix expression?
+Answer: A prefix expression is an expression where the operator precedes the operands.
+
+Question 11: How can a stack be used to evaluate a prefix expression?
+Answer: By pushing operators onto the stack and performing operations when operands are encountered.
+
+Question 12: How can a stack be used to check if a parenthesis expression is balanced?
+Answer: A stack can be used to check if a parenthesis expression is balanced by following these steps:
+Push the opening parenthesis onto the stack.
+When an closing parenthesis is encountered, pop the top element from the stack and check if it matches the closing parenthesis.
+If the stack is empty at the end of the expression, then the expression is balanced.
+If the stack is not empty, then the expression is not balanced.
+
+Commonly Asked Data Structure Interview Questions on Queue
+Question 1: What is a Queue?
+Answer: A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle, where elements are added at the rear (enqueue) and removed from the front (dequeue).
+
+Question 2: What are the different types of Queues?
+Answer:
+
+Simple Queue
+Circular Queue
+Priority Queue
+Double-Ended Queue (Deque)
+
+Question 3: How is a Queue implemented in an array?
+Answer: An array can be used to implement a simple queue by maintaining two pointers: front and rear. Front points to the first element, and rear points to the next available position.
+
+Question 4: How is a Queue implemented in a linked list?
+Answer: A linked list can be used to implement a queue by creating a node for each element and maintaining a head and tail pointer. Enqueueing adds a node to the tail, and dequeueing removes a node from the head.
+
+Question 5: What is the time complexity of enqueue and dequeue operations in a Queue?
+Answer:
+Enqueue: O(1)
+Dequeue: O(1) for simple and circular queues, O(n) for priority queues
+
+Question 6: What is the difference between a Queue and a Stack?
+Answer: A queue follows FIFO, while a stack follows Last-In-First-Out (LIFO).
+
+Question 7: What are the applications of Queues?
+Answer:
+Task scheduling
+Message passing
+Simulation of real-world scenarios
+
+Question 8: How do you handle overflow and underflow conditions in a Queue?
+Answer:
+
+Overflow: When the queue is full, throw an exception or return an error code.
+Underflow: When the queue is empty, throw an exception or return a null value.
+
+Question 9: What is a circular queue?
+Answer: A circular queue is a variation of a simple queue where the rear pointer wraps around to the beginning of the array after reaching the end.
+
+Question 10: What is a priority queue?
+Answer: A priority queue is a queue where elements are assigned priorities and are dequeued based on their priorities.
+
+Question 11: How is a priority queue implemented?
+Answer: Priority queues can be implemented using a binary heap or a self-balancing binary search tree.
+
+Question 12: What is a double-ended queue (Deque)?
+Answer: A deque is a queue that allows insertions and deletions from both ends.
+
+Question 13: How is a deque implemented?
+Answer: A deque can be implemented using two stacks or a circular buffer.
+
+Question 14: What are the advantages of using a Queue?
+Answer:
+
+Simple and efficient FIFO implementation
+Easy to enqueue and dequeue elements
+Supports multiple producers and consumers
+
+Question 15: What are the disadvantages of using a Queue?
+Answer:
+Limited access to elements (only from the front or rear)
+Can be inefficient if elements need to be accessed in a non-sequential order
+
+Commonly Asked Data Structure Interview Questions on Heap Data Structure
+
+Question 1: What is a heap data structure?
+Answer: A heap is a complete binary tree that satisfies the heap property: each node’s value is greater than or equal to its children’s values.
+
+Question 2: What are the two types of heaps?
+Answer: Max-heap and min-heap. In a max-heap, the root node has the maximum value, while in a min-heap, the root node has the minimum value.
+
+Question 3: What is the time complexity of inserting an element into a heap?
+Answer: O(log n), where n is the number of elements in the heap.
+
+Question 4: What is the time complexity of deleting an element from a heap?
+Answer: O(log n), where n is the number of elements in the heap.
+
+Question 5: What is the time complexity of finding the minimum or maximum element in a heap?
+Answer: O(1), as the root node always contains the minimum or maximum element.
+
+Question 6: What are the applications of heaps?
+Answer: Heap applications:
+Priority queues
+Sorting
+Finding the median
+Implementing Dijkstra’s algorithm
+Network routing
+Huffman coding
+
+Question 7: What is the difference between a heap and a binary search tree (BST)?
+Answer: A heap is a complete binary tree that satisfies the heap property, while a BST is a partially ordered binary tree that satisfies the BST property.
+
+Question 8: How do you convert a BST into a heap?
+Answer: By performing an in-order traversal of the BST and inserting the elements into a heap.
+
+Question 9: How do you merge two heaps?
+Answer: By creating a new heap and inserting the elements from both heaps into the new heap while maintaining the heap property.
+
+Question 10: What is the difference between a heap and a priority queue?
+Answer: A heap is a data structure, while a priority queue is an abstract data type that can be implemented using a heap.
+
+Question 11: What are the advantages of using a heap?
+Answer: Advantages of using a heap:
+Efficient insertion and extraction (O(log n))
+Can be used to implement priority queues
+Can be used for sorting (O(n log n))
+Useful for other applications, such as finding the median and implementing Dijkstra’s algorithm
+
+
+Commonly Asked Data Structure Interview Questions on Hash Data Structure
+
+Question 1: What is a hash data structure?
+Answer: A hash data structure is a data structure that stores key-value pairs, where the keys are hashed to determine the location of the value in the data structure.
+
+Question 2: What is a hash table?
+Answer: A hash table is a data structure that implements an associative array, allowing fast retrieval of values based on unique keys. It uses a hash function to map keys to indices in an array, providing constant-time average access (O(1)) if collisions are minimized.
+
+Question 3: What is a hash function?
+Answer: A hash function is a function that takes an input of any size and produces an output of a fixed size. The output is called a hash value or hash code.
+
+Question 4: Explain how a hash function works.
+Answer: A hash function takes an input key and maps it to a fixed-size index (hash value) within the hash table’s array. Ideally, the function distributes keys evenly across the array to minimize collisions. Common hash functions include modulo division, bitwise operations, and polynomial hashing.
+
+Question 5: What is a collision?
+Answer: A collision occurs when two different keys hash to the same value.
+
+Question 6: Describe different collision resolution techniques.
+Answer:
+
+Open addressing: Use probing techniques (linear, quadratic, double hashing) to find the next available slot when a collision occurs.
+Separate chaining: Store key-value pairs in linked lists at each index, leading to better performance for larger data sets.
+Question 7: How are collisions handled in a hash data structure?
+Answer: Collisions can be handled using various techniques, such as chaining, open addressing, and cuckoo hashing.
+
+Question 8: What is chaining?
+Answer: Chaining is a collision resolution technique where colliding keys are stored in a linked list at the same hash value.
+
+Question 9: What is open addressing?
+Answer: Open addressing is a collision resolution technique where colliding keys are stored in the same hash table, but at different locations.
+
+Question 10: What is separate chaining?
+Answer: Separate chaining is a collision resolution technique used in hash tables. When two or more keys hash to the same index in the hash table, instead of overwriting the existing data, separate chaining stores each key-value pair in a linked list at that index. This allows for efficient retrieval of all elements that hash to the same index, even if there are collisions.
+
+Question 11: What are the trade-offs between open addressing and separate chaining?
+Answer:
+
+Open addressing: Less memory overhead, but search performance degrades with collisions.
+Separate chaining: More memory usage, but faster search performance even with collisions.
+Question 12: What is cuckoo hashing?
+Answer: Cuckoo hashing is a collision resolution technique that uses two hash functions to store keys in a hash table.
+
+Question 13: What is the load factor of a hash table?
+Answer: The load factor of a hash table is the ratio of the number of keys stored in the table to the size of the table.
+
+Question 14: What is the optimal load factor for a hash table?
+Answer: The optimal load factor for a hash table depends on the collision resolution technique used, but it is typically around 0.7.
+
+Question 15: Explain the concept of load factor and its impact on performance.
+Answer: Load factor (number of elements / size of hash table) measures how full the table is. Higher load factors increase collision frequency and impact performance. Optimal values vary based on implementation and trade-offs.
+
+Question 16: What are the advantages of using a hash data structure?
+Answer: Hash data structures offer fast lookup, insertion, and deletion operations. They are also space-efficient and can handle large datasets.
+
+Question 17: What are the disadvantages of using a hash data structure?
+Answer: Hash data structures can suffer from collisions, which can slow down lookup operations. They also require a hash function that is both efficient and effective.
+
+Question 18: Explain bloom filters and their applications.
+Answer: Bloom filters use multiple hash functions to probabilistically represent set membership, offering efficient space-time trade-offs for membership queries but not supporting direct value retrieval. Used in caching, network security, and other applications.
+
+Commonly Asked Data Structure Interview Questions on Tree Data Structures:
+Question 1: What is a Tree?
+Answer: A tree is a non-linear data structure consisting of nodes connected by edges. Each node contains data and references to its child nodes. It has one special node called the root, with no parent, and leaf nodes with no children.
+
+Question 2: Explain different types of trees.
+Answer:
+
+Binary Tree: Each node has at most two children (left and right).
+Full Binary Tree: Every node except leaves has two children.
+Complete Binary Tree: All levels are filled except possibly the last, and nodes are filled left to right.
+Perfect Binary Tree: Every node has two children, and all leaves are at the same level.
+AVL Tree: Self-balancing binary search tree with a height difference of at most 1 between subtrees.
+Red-Black Tree: Self-balancing binary search tree with specific coloring rules to maintain balance.
+B-Tree: Generalization of a binary search tree with more than two children per node.
+
+Question 3: What are the basic operations performed on a tree?
+Answer:
+Insertion: Add a new node to the tree while maintaining its properties (e.g., ordering in search trees).
+Deletion: Remove a node from the tree while preserving its structure.
+Traversal: Visit each node in the tree exactly once in a specific order (preorder, inorder, postorder).
+Searching: Find a specific node with a given value based on search criteria.
+
+Question 4: What are the different ways to represent a tree in memory?
+Answer:
+
+Node-based representation: Each node stores its data and references to child nodes.
+Array-based representation: Use an array to store node data with calculations to find child nodes based on their positions.
+
+Question 5: What are the advantages and disadvantages of using trees?
+Advantages:
+Efficient for hierarchical data representation and organization.
+Fast searching and traversal in balanced trees.
+Disadvantages:
+Memory overhead due to storing pointers or references.
+Not efficient for storing large amounts of unstructured data.
+
+Question 6: When would you choose a tree over other data structures like arrays or linked lists?
+Answer: Trees are ideal for hierarchical data, maintaining relationships between elements, and efficient searching based on order. Arrays or linked lists are better for simple linear data or frequent insertions/deletions at specific positions.
+
+Question 7: Explain the concept of a binary search tree.
+Answer: A binary search tree has a specific ordering property: the data in the left subtree is less than the root, and the data in the right subtree is greater than the root. This allows for efficient searching by comparing values with the root and navigating left or right accordingly.
+
+Question 8: How do self-balancing trees like AVL or Red-Black trees work?
+Answer: These trees automatically adjust their structure after insertions or deletions to maintain a balanced height, ensuring efficient search and insertion/deletion operations. They achieve this through specific rules and rotations based on node heights and colors.
+
+Question 9: Describe the different tree traversal methods (preorder, inorder, postorder).
+Answer:
+Preorder: Visit root, then left subtree, then right subtree.
+Inorder: Visit left subtree, then root, then right subtree.
+Postorder: Visit left subtree, then right subtree, then root.
+Each traversal method has different purposes. Inorder is useful for printing sorted elements in a binary search tree, while preorder might be used for copying tree structure.
+
+Question 10: How can you convert a binary search tree into a sorted array?
+Answer: One efficient way is to use an inorder traversal of the tree. Since the tree is sorted, visiting nodes in this order will result in a sorted array.
+
+Question 11: Explain the concept of a minimum spanning tree.
+Answer: A minimum spanning tree is a subgraph of a connected, undirected graph that includes all vertices but with the minimum total edge weight, connecting all nodes without cycles. It has applications in network routing and clustering algorithms.
+
+Question 12: Describe the use of trees in real-world scenarios.
+Answer: Trees are used in various domains, including:
+File systems (directory structure)
+XML or JSON data representation
+Decision trees for machine learning
+Game AI (representing game states and possible actions)
+Social networks (representing user relationships
+
+Commonly Asked Data Structure Interview Questions on Graph:
+
+Question 1: What is a graph?
+Answer: A graph is a data structure consisting of a set of vertices (nodes) and a set of edges that connect pairs of vertices. Graphs are used to represent relationships between objects, such as social networks, road networks, and computer networks.
+
+Question 2: Explain common graph representations.
+Answer:
+
+Adjacency matrix: A 2D array where rows and columns represent nodes, and values indicate the existence of an edge between them. Efficient for space usage, but can be slow for sparse graphs.
+Adjacency list: An array of linked lists or other data structures, where each list stores nodes connected to a specific node. Efficient for sparse graphs and adjacency queries, but may require more space.
+Question 3: Differentiate between directed and undirected graphs.
+Answer:
+
+Directed graphs: Edges have a direction, signifying one-way relationships.
+Undirected graphs: Edges have no direction, representing bidirectional relationships.
+
+Question 4: Describe common graph types.
+Answer:
+Simple graphs: Undirected, no loops or multiple edges between nodes.
+Complete graphs: Every node is connected to every other node.
+Trees: No cycles, a single root node connects to child nodes that don’t form cycles.
+Bipartite graphs: Can be divided into two disjoint sets where only nodes in different sets connect.
+
+Question 5: Discuss time and space complexity of basic graph operations.
+Answer:
+
+Traversal (DFS, BFS): O(V + E) for both time and space, where V is the number of nodes and E is the number of edges.
+Insertion: O(1) for constant-time operations in both adjacency list and matrix, although insertion into sparse matrices requiring reallocation might have amortized cost.
+Deletion: O(degree of the node) for adjacency lists, O(V^2) for adjacency matrices due to potential row/column shifts.
+
+Question 6: Explain Dijkstra’s algorithm and its applications.
+Answer: This algorithm finds the shortest path between two nodes in a weighted graph. It is used in route planning, network optimization, and other problems involving finding minimum-cost paths.
+
+Question 7: Compare DFS and BFS algorithms: strengths, weaknesses, and use cases.
+Answer:
+
+DFS: Explores deeply before exploring breadth-wise, efficient for finding connected components, good for detecting cycles.
+BFS: Explores breadth-wise, efficient for finding shortest paths in unweighted graphs, useful for level-order traversals.
+
+Question 8: Describe topological sorting: algorithm and applications.
+Answer:
+
+Topological sorting: Orders nodes such that edges always point from earlier nodes to later ones, required for tasks with dependencies.
+Application: Used in job scheduling, software dependency management, and circuit design.
+
+Question 9: Explain minimum spanning trees: algorithms and their significance.
+Answer:
+
+Minimum spanning trees: Finds a subset of edges that connects all nodes with minimum total weight while avoiding cycles.
+Significance: Used in network communication, clustering.
