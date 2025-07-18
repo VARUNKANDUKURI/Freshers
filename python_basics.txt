@@ -1,0 +1,215 @@
+📘 PythonBasics.txt
+
+1. What is Python, and what are its key features?
+   - High‑level, interpreted, dynamically typed, object‑oriented.
+   - Features: readability, extensive standard library, cross-platform support  [oai_citation:0‡PYnative](https://pynative.com/python/interview-questions/?utm_source=chatgpt.com).
+
+2. How do you install Python and check its version?
+   - Install via python.org or package manager, verify using:
+     ```
+     python --version
+     ```
+     or 
+     ```
+     python3 --version
+     ```
+
+3. What is the difference between Python 2 and 3?
+   - Major syntax and library changes; Python 2 is legacy, Python 3 is current standard.
+
+4. What is a virtual environment and why use it?
+   - Isolated workspace for separate dependencies—it avoids version conflicts.
+
+5. What are Python's core data types?
+   - `int`, `float`, `complex`, `str`, `list`, `tuple`, `dict`, `set`, `frozenset`, `bool`, `bytes`  [oai_citation:1‡W3Schools](https://www.w3schools.com/python/python_interview_questions.asp?utm_source=chatgpt.com).
+
+6. What is the difference between mutable and immutable types?
+   - Mutable (lists, dicts, sets) can change; immutable (int, str, tuple) cannot  [oai_citation:2‡DataCamp](https://www.datacamp.com/blog/top-python-interview-questions-and-answers?utm_source=chatgpt.com).
+
+7. Explain scoping: local vs global variables.
+   - Local are defined inside functions; global are module-level and accessible anywhere  [oai_citation:3‡UPES Online](https://upesonline.ac.in/blog/python-interview-questions-basics-and-advanced?utm_source=chatgpt.com) [oai_citation:4‡W3Schools](https://www.w3schools.com/python/python_interview_questions.asp?utm_source=chatgpt.com).
+
+8. What are Python operators?
+   - Arithmetic, comparison, logical, bitwise, assignment, membership, identity.
+
+9. What is the difference between `==` and `is`?
+   - `==`: value equality; `is`: identity (same object in memory).
+
+10. What role does indentation play?
+    - Defines code blocks—Python syntax enforces it  [oai_citation:5‡W3Schools](https://www.w3schools.com/python/python_interview_questions.asp?utm_source=chatgpt.com) [oai_citation:6‡UPES Online](https://upesonline.ac.in/blog/python-interview-questions-basics-and-advanced?utm_source=chatgpt.com).
+
+11. How do conditional statements work?
+    - `if`, `elif`, `else`.
+
+12. When do you use `pass`?
+    - Placeholder for empty code blocks  [oai_citation:7‡UPES Online](https://upesonline.ac.in/blog/python-interview-questions-basics-and-advanced?utm_source=chatgpt.com) [oai_citation:8‡W3Schools](https://www.w3schools.com/python/python_interview_questions.asp?utm_source=chatgpt.com).
+
+13. Explain loops: `for` vs `while`.
+    - `for`: iterate over sequence; `while`: condition-based loop ().
+
+14. What is `range()` used for?
+    - Generates a sequence of numbers, commonly used in loops.
+
+15. Write a function definition with *args and **kwargs.
+    ```python
+    def func(*args, **kwargs):
+        pass
+    ```
+    - `*args`: tuple of positional args; `**kwargs`: dict of keyword args  [oai_citation:9‡DataCamp](https://www.datacamp.com/blog/top-python-interview-questions-and-answers?utm_source=chatgpt.com).
+
+16. What is a lambda function?
+    - Anonymous, single-expression function:
+      ```python
+      f = lambda x, y: x + y
+      ```
+
+17. What are list/dict/set comprehensions?
+    - Compact, expressive syntax for creating collections  [oai_citation:10‡Simplilearn.com](https://www.simplilearn.com/tutorials/python-tutorial/python-interview-questions?utm_source=chatgpt.com) [oai_citation:11‡DataCamp](https://www.datacamp.com/blog/top-python-interview-questions-and-answers?utm_source=chatgpt.com) [oai_citation:12‡W3Schools](https://www.w3schools.com/python/python_interview_questions.asp?utm_source=chatgpt.com).
+
+18. What are modules and packages?
+    - Module: single `.py` file. Package: directory with `__init__.py`.
+
+19. How do you import?
+    ```python
+    import math
+    from os import path
+    ```
+
+20. What is `__init__.py`?
+    - Marks a directory as a package.
+
+21. How do you read/write files?
+    ```python
+    with open('file.txt', 'r') as f:
+        data = f.read()
+    ```
+    - File modes: `r`, `w`, `a`; `with` automatically closes file  [oai_citation:13‡DataCamp](https://www.datacamp.com/blog/top-python-interview-questions-and-answers?utm_source=chatgpt.com) [oai_citation:14‡GeeksforGeeks](https://www.geeksforgeeks.org/python/python-interview-questions/?utm_source=chatgpt.com).
+
+22. Explain exception handling.
+    ```python
+    try:
+        ...
+    except Exception as e:
+        ...
+    finally:
+        ...
+    ```
+    - Handles runtime errors, with optional cleanup  [oai_citation:15‡PYnative](https://pynative.com/python/interview-questions/?utm_source=chatgpt.com) [oai_citation:16‡UPES Online](https://upesonline.ac.in/blog/python-interview-questions-basics-and-advanced?utm_source=chatgpt.com).
+
+23. Name common exceptions.
+    - `TypeError`, `ValueError`, `IndexError`, `KeyError`, `ZeroDivisionError`, `AttributeError`, `FileNotFoundError`.
+
+24. What is shallow vs deep copy?
+    - Shallow copy references nested objects; deep copy duplicates everything  [oai_citation:17‡W3Schools](https://www.w3schools.com/python/python_interview_questions.asp?utm_source=chatgpt.com) [oai_citation:18‡Simplilearn.com](https://www.simplilearn.com/tutorials/python-tutorial/python-interview-questions?utm_source=chatgpt.com).
+
+25. What are iterators and generators?
+    - Iterator: object with `__iter__()`, `__next__()`.
+    - Generator: uses `yield` to lazily return sequence  [oai_citation:19‡W3Schools](https://www.w3schools.com/python/python_interview_questions.asp?utm_source=chatgpt.com).
+
+26. What is the Global Interpreter Lock (GIL)?
+    - A lock in CPython that allows only one thread to execute bytecode at a time—limits CPU threading performance  [oai_citation:20‡DataCamp](https://www.datacamp.com/blog/top-python-interview-questions-and-answers?utm_source=chatgpt.com).
+
+27. What are decorators?
+    - Functions that modify other functions:
+      ```python
+      def deco(func):
+          def wrapper(*args, **kwargs):
+              ...
+          return wrapper
+      ```
+
+28. What are context managers?
+    - Objects used with `with` implementing `__enter__()`/`__exit__()`  [oai_citation:21‡DataCamp](https://www.datacamp.com/blog/top-python-interview-questions-and-answers?utm_source=chatgpt.com).
+
+29. Why follow PEP 8 style?
+    - Improves readability and consistency  [oai_citation:22‡UPES Online](https://upesonline.ac.in/blog/python-interview-questions-basics-and-advanced?utm_source=chatgpt.com).
+
+30. Explain OOP: class vs instance, inheritance, polymorphism.
+    - Class: blueprint; instance: object.
+    - Inheritance: child inherits parent attributes/methods.
+    - Polymorphism: same method works differently based on object type  [oai_citation:23‡PYnative](https://pynative.com/python/interview-questions/?utm_source=chatgpt.com) [oai_citation:24‡UPES Online](https://upesonline.ac.in/blog/python-interview-questions-basics-and-advanced?utm_source=chatgpt.com).
+
+31. What is `__init__()` and `__str__()`?
+    - `__init__()`: constructor, initializes object.
+    - `__str__()`: returns readable string representation  [oai_citation:25‡W3Schools](https://www.w3schools.com/python/python_interview_questions.asp?utm_source=chatgpt.com) [oai_citation:26‡Simplilearn.com](https://www.simplilearn.com/tutorials/python-tutorial/python-interview-questions?utm_source=chatgpt.com) [oai_citation:27‡PYnative](https://pynative.com/python/interview-questions/?utm_source=chatgpt.com).
+
+32. What are magic methods?
+    - Special methods like `__add__`, `__len__`, `__eq__` to define built-in behaviors.
+
+33. How do you implement multiple inheritance?
+    - By passing multiple parent classes:
+      ```python
+      class C(A, B): pass
+      ```
+
+34. What are metaclasses?
+    - Classes that define how other classes behave/are created  [oai_citation:28‡UPES Online](https://upesonline.ac.in/blog/python-interview-questions-basics-and-advanced?utm_source=chatgpt.com) [oai_citation:29‡DataCamp](https://www.datacamp.com/blog/top-python-interview-questions-and-answers?utm_source=chatgpt.com).
+
+35. How does garbage collection work?
+    - Uses reference counting and cyclic GC via `gc` module  [oai_citation:30‡DataCamp](https://www.datacamp.com/blog/top-python-interview-questions-and-answers?utm_source=chatgpt.com).
+
+36. How can you use `collections` module?
+    - Provides `defaultdict`, `Counter`, `deque`, `OrderedDict` for advanced data structures  [oai_citation:31‡DataCamp](https://www.datacamp.com/blog/top-python-interview-questions-and-answers?utm_source=chatgpt.com).
+
+37. What is NumPy?
+    - Library for numerical computing; arrays are faster and more efficient than Python lists ().
+
+38. How to create NumPy arrays and perform element-wise ops.
+    ```python
+    import numpy as np
+    a = np.array([1, 2, 3])
+    b = a * 2
+    ```
+
+39. What is Pandas?
+    - Library for data analysis; main types: `DataFrame`, `Series` ().
+
+40. How to read CSV, filter rows, and group in Pandas.
+    ```python
+    df = pd.read_csv('data.csv')
+    filtered = df[df.age > 30]
+    grouped = df.groupby('city').sum()
+    ```
+
+41. What is Matplotlib used for?
+    - Plotting library for visualizations: line, bar, histogram, scatter  [oai_citation:32‡Codefinity](https://codefinity.com/blog/Top-50-Python-Interview-Questions-for-Data-Analyst?utm_source=chatgpt.com).
+
+42. How do you make a line plot?
+    ```python
+    import matplotlib.pyplot as plt
+    plt.plot([1,2,3], [4,5,6])
+    plt.show()
+    ```
+
+43. What is Requests?
+    - Library for making HTTP requests:
+    ```python
+    import requests
+    r = requests.get('https://api.example.com')
+    data = r.json()
+    ```
+
+44. What is Flask? What is Django?
+    - Flask: micro web‑framework; Django: full‑stack framework with ORM, templating, admin panel  [oai_citation:33‡PYnative](https://pynative.com/python/interview-questions/?utm_source=chatgpt.com).
+
+45. Compare Flask vs Django.
+    - Flask: lightweight, flexible.
+    - Django: structured, batteries-included.
+
+46. What is scikit-learn?
+    - Library for machine learning: regression, classification, clustering.
+
+47. What are pickling and unpickling?
+    - Serialization (`pickle.dump`) and deserialization (`pickle.load`) of Python objects  [oai_citation:34‡Codefinity](https://codefinity.com/blog/Top-50-Python-Interview-Questions-for-Data-Analyst?utm_source=chatgpt.com) [oai_citation:35‡Simplilearn.com](https://www.simplilearn.com/tutorials/python-tutorial/python-interview-questions?utm_source=chatgpt.com).
+
+48. How do you implement unit tests?
+    - Use `unittest` or `pytest` frameworks.
+
+49. Why use type hinting?
+    - Adds static type checks, improves code readability and maintainability.
+
+50. Describe SOLID principles briefly.
+    - Design principles for clean, maintainable, testable OOP code (e.g., Single Responsibility, Dependency Inversion).
+
+51. Explain a real‑world coding challenge:
+    - **Example**: Given a very large file (~1 GB), find the first non-repeating character without loading entire file—stream-based solution  [oai_citation:36‡Reddit](https://www.reddit.com/r/learnpython/comments/1fjmq6v/python_interview_questions_i_can_use_in_interviews/?utm_source=chatgpt.com).
